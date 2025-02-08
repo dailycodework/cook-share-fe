@@ -1,0 +1,464 @@
+:root
+{
+  --nav-and-footer: #562f63b5;
+  --hero-btn-color: #ff6347;
+  --home-title-color: #7e6c6c;
+}
+
+/******************** Start navbar ************************* */
+
+.navbar
+{
+  background-color: var(--nav-and-footer);
+}
+
+.logo
+{
+  font-family: 'Roboto', sans-serif;
+  flex-grow: 1;
+  text-align: center;
+  transition: transform 0.3s;
+  font-style: italic;
+}
+
+.logo:hover
+{
+  transform: scale(1.5);
+}
+
+.nav-links
+{
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links
+{
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.nav-links:hover
+{
+  color: var(--hero-btn-color);
+  transform: scale(1.1);
+}
+
+.nav-links
+{
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 4px;
+
+}
+
+.nav-links::after
+{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+
+.nav-links:hover::after
+{
+  transform: scaleX(1);
+}
+
+/**************************** End navbar ******************************** */
+
+
+
+/***************** Start footer **************************/
+.footer
+{
+  background-color: var(--nav-and-footer);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+}
+
+/********************* End footer ********************** */
+
+/********************* Start the hero component *********************************/
+
+.hero
+{
+  position: relative;
+}
+
+.hero-content
+{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(223, 215, 202);
+  text-align: center;
+  z-index: 2;
+  background-color: rgba(0, 0, 0.2, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero-title
+{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle
+{
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+
+.hero-button
+{
+  background-color: #b16b35;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.hero-button:hover
+{
+  background-color: var(--nav-and-footer);
+}
+
+@media (max-width: 576px)
+{
+  .hero
+  {
+    margin-bottom: 10px;
+  }
+
+  .categories-container
+  {
+    margin-top: 10px;
+  }
+}
+
+/********* End hero **********/
+
+/* Start hero slider */
+.slide-container
+{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.each-fade
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.image-container
+{
+  width: 100%;
+  height: 100%;
+}
+
+.image-container img
+{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* End hero slider */
+
+.recipe-title
+{
+  color: var(--nav-and-footer);
+  font-size: 22px;
+  font-weight: 700;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sub-titles
+{
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--nav-and-footer);
+  font-weight: 400;
+  text-align: left;
+}
+
+.home-title
+{
+  font-size: 34px;
+  font-weight: 500;
+  color: var(--home-title-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Start review */
+.review-item
+{
+  margin-bottom: 10px;
+  color: #57626b;
+  text-align: left;
+  position: relative;
+  padding: 10px;
+}
+
+.review-item-controls
+{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.review-form
+{
+  border: 1px solid red;
+}
+
+.left-align
+{
+  text-align: left;
+}
+
+.review-item img
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.username
+{
+  font-size: 16px;
+  color: #486ca3;
+}
+
+/* Start categories styling */
+.category
+{
+  font-size: 18px;
+  color: #dd9038;
+  font-weight: 500;
+}
+
+.categories-container
+{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.category-item
+{
+  background-color: var(--nav-and-footer);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+
+}
+
+.category-item.active
+{
+  background-color: #0a0a0a;
+  border: 2px solid #a82121;
+}
+
+.category-item:hover
+{
+  transform: scale(1.05);
+}
+
+/* End categories styling */
+
+/* Start rating and like */
+
+.rating
+{
+  font-size: 16px;
+  color: #a98e36;
+}
+
+.thumb
+{
+  display: flex;
+  align-items: center;
+}
+
+.thumb-icon
+{
+  cursor: pointer;
+  color: gray;
+  transition: color 0.3s;
+}
+
+/* Active state color */
+.thumb-icon.active
+{
+  color: #3b6fea;
+}
+
+.recipe-details-link
+{
+  background-color: var(--nav-and-footer);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* End ratings and like */
+
+/* Start image upload component */
+
+.image-preview
+{
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.image-preview img
+{
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* End image upload component */
+
+
+/* Start about us page */
+
+.about-us
+{
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h1
+{
+  color: #333;
+}
+
+.about-us h2
+{
+  margin-top: 20px;
+  color: #555;
+}
+
+.about-us p
+{
+  line-height: 1.6;
+}
+
+.about-us ul
+{
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-us li
+{
+  margin-bottom: 15px;
+}
+
+/* End about us page */
+
+/* Start sidebar */
+
+.sidebar
+{
+  width: 150px;
+  padding: 20px;
+  height: auto;
+  overflow-y: auto;
+}
+
+.filter-options
+{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+}
+
+.filter-option
+{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.filter-option:hover
+{
+  background: #eee;
+}
+
+input[type="checkbox"]
+{
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.checkmark
+{
+  position: relative;
+  top: -1px;
+}
+
+/* End sidebar */
+
+/* Start home container */
+.home-container
+{
+  display: flex;
+}
+
+.main-content
+{
+  flex: 1;
+  padding-left: 20px;
+}
+
+.cuisine-text
+{
+  font-size: 18px;
+  color: var(--home-title-color);
+  margin-bottom: 10px;
+}
+
+/* End home container */
