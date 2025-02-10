@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import HeroImageSlider from "./HeroImageSlider";
+import CustomLink from "../common/CustomLink";
 
 const Hero = () => {
   return (
@@ -11,7 +11,12 @@ const Hero = () => {
         <p className='hero-sub-title'>
           Your go-to platform for sharing an discovering delicious recipes
         </p>
-        <Link className='hero-button'>Explore recipes for your next meal!</Link>
+        <CustomLink
+          to='explore'
+          className='hero-button'
+          style={{ cursor: "pointer" }}>
+          Explore recipes for your next meal!
+        </CustomLink>
       </div>
     </div>
   );

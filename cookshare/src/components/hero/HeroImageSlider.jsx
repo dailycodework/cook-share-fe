@@ -15,7 +15,7 @@ const HeroImageSlider = () => {
     transitionDuration: 500,
     infinite: true,
     indicators: true,
-    arrows: true,
+    arrows: false,
     autoplay: true,
   };
   return (
