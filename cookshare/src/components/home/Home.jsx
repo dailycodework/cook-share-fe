@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import Hero from "../hero/Hero";
 import RecipeCard from "../recipe/RecipeCard";
 import { getAllRecipes } from "../services/RecipeService";
@@ -14,7 +14,7 @@ const Home = () => {
   const [errorMessage, setErrorMessage] = useState(null);
   const [selectedCuisines, setSelectedCuisines] = useState([]);
 
-  useEffect(() => {
+ useEffect(() => {
     const fetchRecipes = async () => {
       try {
         const response = await getAllRecipes();
@@ -28,6 +28,7 @@ const Home = () => {
     };
     fetchRecipes();
   }, []);
+
 
   useEffect(() => {
     let filtered = recipes;

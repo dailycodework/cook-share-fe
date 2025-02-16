@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const RecipeImage = ({ recipeId }) => {
+const ImageDownloader = ({ recipeId }) => {
   const [recipeImage, setRecipeImage] = useState(null);
 
   useEffect(() => {
@@ -34,4 +34,4 @@ const RecipeImage = ({ recipeId }) => {
   );
 };
 
-export default RecipeImage;
+export default ImageDownloader;

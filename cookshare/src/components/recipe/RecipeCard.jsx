@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Row, Card } from "react-bootstrap";
-import RecipeImage from "../common/RecipeImage";
+import ImageDownloader from "../image/ImageDownloader";
 import Like from "../common/Like";
 import RatingStars from "../common/RatingStars";
 import PreparationDetails from "../common/PreparationDetails";
@@ -17,13 +17,13 @@ const RecipeCard = ({ recipe }) => {
             <Link>
               <div className='image-container'>
                 {recipe.imageDto && (
-                  <RecipeImage recipeId={recipe.imageDto.id} />
+                  <ImageDownloader recipeId={recipe.imageDto.id} />
                 )}
               </div>
             </Link>
             <Row className='mt-4'>
               <Col>
-                <Like recipeId={recipe.id}/>
+                <Like recipeId={recipe.id} likes={recipe.likeCount} />
               </Col>
               <Col>
                 <Card.Text className='rating'>
@@ -42,7 +42,7 @@ const RecipeCard = ({ recipe }) => {
             />
           </Card.Body>
 
-          <Link
+          <Link to={`recipe/${recipe.id}/recipe-details`}          
             className='btn btn-secondary btn-sm'
             style={{ backgroundColor: "#562f63b5" }}>
             View recipe details
